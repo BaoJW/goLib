@@ -17,4 +17,6 @@ func (ba *BaseApp) Start() {
 	if ba.http.ready {
 		go ba.startHttp()
 	}
+
+	select {}
 }
