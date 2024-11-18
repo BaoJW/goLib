@@ -10,7 +10,7 @@ import (
 
 type HttpConfig struct {
 	Host   string
-	Port   string
+	Port   int
 	Cors   CorsConfig
 	engine *gin.Engine
 	ready  bool
@@ -62,7 +62,7 @@ func DefaultCorsConfig() CorsConfig {
 func DefaultHttpConfig() HttpConfig {
 	return HttpConfig{
 		Host:   "0.0.0.0",
-		Port:   "8080",
+		Port:   8080,
 		Cors:   DefaultCorsConfig(),
 		engine: nil,
 		ready:  false,
